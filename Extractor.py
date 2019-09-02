@@ -3,6 +3,8 @@ import os
 import glob
 import patoolib
 
+# note this script is formatted for Windows not Unix
+
 
 def ftpDownloader(stationId, startYear, endYear, url="ftp.pyclass.com", user="student@pyclass.com", passwd="student123"):
     ftp = FTP(url)
