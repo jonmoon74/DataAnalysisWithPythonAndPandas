@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import seaborn as sns
 
 
 def pivot(infile="Concatenated-Merged.csv", outfile="Pivoted.csv"):
@@ -8,6 +9,3 @@ def pivot(infile="Concatenated-Merged.csv", outfile="Pivoted.csv"):
     df["Temp"] = df["Temp"] / 10.0
     table = pd.pivot_table(df, index=["ID"], columns="Year", values="Temp")
     table.to_csv(outfile)
-
-
-pivot()
